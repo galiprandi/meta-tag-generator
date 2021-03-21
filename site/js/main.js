@@ -1,5 +1,3 @@
-document.addEventListener('DOMContentLoaded', initApp)
-
 let data = {
   charset: 'utf-8',
   viewport: 'width=device-width, initial-scale=1',
@@ -7,19 +5,24 @@ let data = {
   type: 'website',
 }
 
+document.addEventListener('DOMContentLoaded', initApp)
+
+// Main function
 function initApp() {
   const form = document.getElementById('form')
   const results = document.getElementById('headerResult')
   const button = document.getElementById('copyButton')
 
-  loadFormsFromData(form, data)
-
   form.addEventListener('keyup', handleFormChange)
+
   form.addEventListener('submit', () => {
     event.preventDefault()
     copyToClipboard(results.textContent)
   })
+
   button.addEventListener('click', copyToClipboard(results.textContent))
+
+  loadFormsFromData(form, data)
   renderData(data)
 }
 
@@ -30,21 +33,17 @@ function handleFormChange() {
 
   inputs.map(input => {
     const { name, value } = input
-    if (value) data[name] = value
+    !!value ? (data[name] = value) : delete data[name]
   })
-  console.log(data)
+  console.table(data)
   renderData(data)
 }
 
+// Update form from data
 function loadFormsFromData(form, object) {
   for (const key in object) {
     if (form[key]) form[key].value = object[key]
   }
-}
-
-function syncFromData(key, value) {
-  data[key] = value
-  document.forms[0][key].value = value
 }
 
 // Render head information
@@ -80,6 +79,7 @@ function renderData({
   if (url) header.push(`<meta property="og:url" content="${url}" />`)
   if (type) header.push(`<meta property="og:type" content="${type}" />`)
   if (image) header.push(`<meta property="og:image" content="${image}" />`)
+  if (title) header.push(`<meta property="og:image:alt" content="${title}" />`)
 
   // Twitter
   header.push(`\n<!-- Twitter -->`)
