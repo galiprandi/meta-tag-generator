@@ -53,51 +53,144 @@
         <form id="form">
           <fieldset>
             <legend>Website information</legend>
+
+            <label for="charset"
+              >Document's character encoding
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Glossary/character_encoding"
+                target="_blank"
+                rel="noopener noreferrer"
+                >?</a
+              >
+            </label>
             <input
               type="text"
               name="charset"
+              id="charset"
               placeholder="This element specifies the document's character encoding"
             />
+
+            <label for="viewport"
+              >Make non-mobile-optimized sites in general look better.
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag"
+                target="_blank"
+                rel="noopener noreferrer"
+                >?</a
+              ></label
+            >
             <input
               type="text"
               name="viewport"
+              id="viewport"
               placeholder="The browser's viewport is the area of the window in which web content can be seen."
             />
+
+            <label for="title">
+              The contents of a page title
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title"
+                target="_blank"
+                rel="noopener noreferrer"
+                >?</a
+              >
+            </label>
             <input
               type="text"
               name="title"
+              id="title"
               placeholder="This can be used to add a title to the document."
             />
+
+            <label for="descripttion"
+              >A description that includes keywords relating to the content of
+              your page.</label
+            >
             <input
               type="text"
               name="description"
+              id="description"
               placeholder="Specifying a description that includes keywords relating to the content of your page is useful as it has the potential to make your page appear higher in relevant searches performed in search engines."
             />
+
+            <label for="url"
+              >The canonical URL of your site.
+              <a
+                href="https://ogp.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >?</a
+              >
+            </label>
             <input
               type="url"
               name="url"
+              id="url"
               placeholder="The canonical URL of your object that will be used as its permanent ID in the graph."
             />
+
+            <label for="author"
+              >The author URL of this site or page.
+              <a
+                href="https://ogp.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >?</a
+              >
+            </label>
             <input
               type="text"
               name="author"
+              id="author"
               placeholder="Specifying an author is beneficial in many ways: it is useful to be able to understand who wrote the page."
             />
+
+            <label for="image"
+              >An image URL which should represent your object within the graph.
+              <a
+                href="https://ogp.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >?</a
+              >
+            </label>
             <input
               type="text"
               name="image"
               placeholder="An image URL which should represent your object within the graph."
             />
+
+            <label for="favicon">
+              A favicon (favorite icon) is a tiny icon included along with a
+              website.
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Glossary/Favicon"
+                target="_blank"
+                rel="noopener noreferrer"
+                >?</a
+              >
+            </label>
             <input
               type="text"
               name="favicon"
+              id="favicon"
               placeholder="A favicon is a graphic image (icon) associated with a Web page"
             />
 
-            <!-- Open Graph -->
+            <label for="type">
+              Type of page content: website, article, book, profile, music,
+              video
+              <a
+                href="https://ogp.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >?</a
+              >
+            </label>
             <input
               type="text"
               name="type"
+              id="type"
               placeholder="The type of your object, depending on the type you specify, other properties may also be required. (website, article, book, profile, music, video)"
               list="type"
             />
