@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>meta-tag-generator</title>
+
+    <link rel="stylesheet" href="site/css/main.css" />
+  </head>
+  <body>
+    <main id="app" class="container">
+      <h1>Meta Tags Generador</h1>
+      <p>Make your meta tags quick and easy.</p>
+      <div class="form">
+        <form id="form">
+          <fieldset>
+            <legend>Website information</legend>
+            <input
+              type="text"
+              name="charset"
+              placeholder="This element specifies the document's character encoding"
+            />
+            <input
+              type="text"
+              name="viewport"
+              placeholder="The browser's viewport is the area of the window in which web content can be seen."
+            />
+            <input
+              type="text"
+              name="title"
+              placeholder="This can be used to add a title to the document."
+            />
+            <input
+              type="text"
+              name="description"
+              placeholder="Specifying a description that includes keywords relating to the content of your page is useful as it has the potential to make your page appear higher in relevant searches performed in search engines."
+            />
+            <input
+              type="url"
+              name="url"
+              placeholder="The canonical URL of your object that will be used as its permanent ID in the graph."
+            />
+            <input
+              type="text"
+              name="author"
+              placeholder="Specifying an author is beneficial in many ways: it is useful to be able to understand who wrote the page."
+            />
+            <input
+              type="text"
+              name="image"
+              placeholder="An image URL which should represent your object within the graph."
+            />
+            <input
+              type="text"
+              name="favicon"
+              placeholder="A favicon is a graphic image (icon) associated with a Web page"
+            />
+
+            <!-- Open Graph -->
+            <input
+              type="text"
+              name="type"
+              placeholder="The type of your object, depending on the type you specify, other properties may also be required. (website, article, book, profile, music, video)"
+              list="type"
+            />
+            <datalist id="type">
+              <option value="website" selected>website</option>
+              <option value="article">article</option>
+              <option value="book">book</option>
+              <option value="profile">profile</option>
+              <option value="music">music</option>
+              <option value="video">video</option>
+            </datalist>
+
+            <button id="copyButton">Copy to Clipboard</button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="results">
+        <pre class="headerResult" id="headerResult"></pre>
+      </div>
+    </main>
+    <script src="site/js/main.js"></script>
+  </body>
+</html>
