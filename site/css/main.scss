@@ -17,7 +17,8 @@ body {
   color: $color;
 }
 
-main {
+main,
+footer {
   max-width: 700px;
   margin: auto;
 }
@@ -42,6 +43,7 @@ form {
       width: 50%;
       margin: auto;
       line-height: 2.5em;
+      text-transform: uppercase;
     }
 
     input {
@@ -51,6 +53,22 @@ form {
   }
 }
 
-pre {
-  padding: 0 10em;
+footer {
+  background-color: $color;
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+  margin: 1em auto;
+  border-radius: $border-radius;
+
+  a,
+  a:visited,
+  a:link {
+    color: $background-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
