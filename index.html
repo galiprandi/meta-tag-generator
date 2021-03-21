@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta Tags Generador / https://galiprandi.github.io/meta-tag-generator -->
+    <!-- Meta Tags Generador / http://127.0.0.1:5500/index.html -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Meta Tags Generator</title>
-    <meta name="description" content="Make your meta tags quick and easy" />
+    <meta name="description" content="Make your meta tags quick and easy." />
     <meta name="author" content="Germán Aliprandi" />
+    <link
+      rel="shortcut icon"
+      href="https://galiprandi.github.io/me/images/profile_circle.png"
+      type="image/x-icon"
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Meta Tags Generator" />
     <meta
       property="og:description"
-      content="Make your meta tags quick and easy"
-    />
-    <meta
-      property="og:url"
-      content="https://galiprandi.github.io/meta-tag-generator"
+      content="Make your meta tags quick and easy."
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://galiprandi.github.io/me/images/profile.jpg"
-    />
     <meta property="og:image:alt" content="Meta Tags Generator" />
 
     <!-- Open Graph / Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:url"
-      content="https://galiprandi.github.io/meta-tag-generator"
-    />
     <meta name="twitter:title" content="Meta Tags Generator" />
     <meta
       name="twitter:description"
-      content="Make your meta tags quick and easy"
+      content="Make your meta tags quick and easy."
     />
-    <meta
-      name="twitter:image"
-      content="https://galiprandi.github.io/me/images/profile.jpg"
-    />
-    <!-- Meta Tags Generador / https://galiprandi.github.io/meta-tag-generator -->
+    <!-- Meta Tags Generador / http://127.0.0.1:5500/index.html -->
 
     <!-- Style stylesheet -->
     <link rel="stylesheet" href="site/css/main.css" />
@@ -113,24 +102,8 @@
               placeholder="Specifying a description that includes keywords relating to the content of your page is useful as it has the potential to make your page appear higher in relevant searches performed in search engines."
             />
 
-            <label for="url"
-              >The canonical URL of your site.
-              <a
-                href="https://ogp.me/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >?</a
-              >
-            </label>
-            <input
-              type="url"
-              name="url"
-              id="url"
-              placeholder="The canonical URL of your object that will be used as its permanent ID in the graph."
-            />
-
             <label for="author"
-              >The author URL of this site or page.
+              >The author of website or page.
               <a
                 href="https://ogp.me/"
                 target="_blank"
@@ -143,21 +116,6 @@
               name="author"
               id="author"
               placeholder="Specifying an author is beneficial in many ways: it is useful to be able to understand who wrote the page."
-            />
-
-            <label for="image"
-              >An image URL which should represent your object within the graph.
-              <a
-                href="https://ogp.me/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >?</a
-              >
-            </label>
-            <input
-              type="text"
-              name="image"
-              placeholder="An image URL which should represent your object within the graph."
             />
 
             <label for="favicon">
@@ -175,6 +133,37 @@
               name="favicon"
               id="favicon"
               placeholder="A favicon is a graphic image (icon) associated with a Web page"
+            />
+
+            <label for="url"
+              >The canonical URL of your site.
+              <a
+                href="https://ogp.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >?</a
+              >
+            </label>
+            <input
+              type="url"
+              name="url"
+              id="url"
+              placeholder="The canonical URL of your object that will be used as its permanent ID in the graph."
+            />
+
+            <label for="image"
+              >An image URL which should represent your object within the graph.
+              <a
+                href="https://ogp.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >?</a
+              >
+            </label>
+            <input
+              type="text"
+              name="image"
+              placeholder="An image URL which should represent your object within the graph."
             />
 
             <label for="type">
