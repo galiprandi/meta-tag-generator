@@ -58,7 +58,7 @@ function renderData({
   type,
 }) {
   const copyright = `<!-- Meta Tags Generador / ${location.href} -->`
-  let header = [copyright]
+  let header = [] // = [copyright]
 
   if (charset) header.push(`<meta charset="${charset}" />`)
   if (viewport) header.push(`<meta name="viewport" content="${viewport}">`)
@@ -72,7 +72,7 @@ function renderData({
       `<link rel="shortcut icon" href="${favicon}" type="image/x-icon">`
     )
   // Open Graph / Facebook
-  header.push(`\n<!-- Open Graph / Facebook -->`)
+  if (title) header.push(`\n<!-- Open Graph / Facebook -->`)
   if (title) header.push(`<meta property="og:title" content="${title}" />`)
   if (description)
     header.push(`<meta property="og:description" content="${description}" />`)
@@ -82,8 +82,10 @@ function renderData({
   if (title) header.push(`<meta property="og:image:alt" content="${title}" />`)
 
   // Open Graph / Twitter
-  header.push(`\n<!-- Open Graph / Twitter -->`)
-  header.push(`<meta name="twitter:card" content="summary_large_image" />`)
+  if (title) {
+    header.push(`\n<!-- Open Graph / Twitter -->`)
+    header.push(`<meta name="twitter:card" content="summary_large_image" />`)
+  }
 
   if (url) header.push(`<meta name="twitter:url" content="${url}" />`)
   if (title) header.push(`<meta name="twitter:title" content="${title}" />`)
@@ -91,7 +93,7 @@ function renderData({
     header.push(`<meta name="twitter:description" content="${description}" />`)
   if (image) header.push(`<meta name="twitter:image" content="${image}" />`)
 
-  header.push(copyright)
+  if (header.length > 0) header = [copyright, ...header, copyright]
 
   const resultContainer = document.getElementById('headerResult')
   resultContainer.textContent = header.join('\n')
