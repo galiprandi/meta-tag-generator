@@ -95,7 +95,7 @@ function renderData({
   resultContainer.textContent = header.join('\n')
 }
 
-const copyToClipboard = textToCopy => {
+function copyToClipboard(textToCopy) {
   try {
     let el = document.createElement('textarea')
     el.value = textToCopy
@@ -104,7 +104,18 @@ const copyToClipboard = textToCopy => {
     document.execCommand('copy')
     document.body.removeChild(el)
     console.info(`Text copied: ${textToCopy}`)
+    tigerAnimation()
   } catch (error) {
     console.error(error)
   }
+}
+
+function tigerAnimation() {
+  let timer
+  clearInterval(timer)
+  const span = document.querySelector('.message')
+  span.classList.add('active')
+  timer = setTimeout(() => {
+    span.classList.remove('active')
+  }, 2000)
 }
