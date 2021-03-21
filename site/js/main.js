@@ -1,7 +1,6 @@
 let data = {
   charset: 'utf-8',
   viewport: 'width=device-width, initial-scale=1',
-  favicon: 'favicon.ico',
   type: 'website',
 }
 
@@ -58,7 +57,8 @@ function renderData({
   url,
   type,
 }) {
-  let header = []
+  const copyright = `<!-- Meta Tags Generador / ${location.href} -->`
+  let header = [copyright]
 
   if (charset) header.push(`<meta charset="${charset}" />`)
   if (viewport) header.push(`<meta name="viewport" content="${viewport}">`)
@@ -81,8 +81,8 @@ function renderData({
   if (image) header.push(`<meta property="og:image" content="${image}" />`)
   if (title) header.push(`<meta property="og:image:alt" content="${title}" />`)
 
-  // Twitter
-  header.push(`\n<!-- Twitter -->`)
+  // Open Graph / Twitter
+  header.push(`\n<!-- Open Graph / Twitter -->`)
   header.push(`<meta name="twitter:card" content="summary_large_image" />`)
 
   if (url) header.push(`<meta name="twitter:url" content="${url}" />`)
@@ -90,6 +90,8 @@ function renderData({
   if (description)
     header.push(`<meta name="twitter:description" content="${description}" />`)
   if (image) header.push(`<meta name="twitter:image" content="${image}" />`)
+
+  header.push(copyright)
 
   const resultContainer = document.getElementById('headerResult')
   resultContainer.textContent = header.join('\n')
