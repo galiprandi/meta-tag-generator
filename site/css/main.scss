@@ -54,18 +54,17 @@ form {
 }
 
 footer {
-  background-color: $color;
   display: flex;
   justify-content: space-around;
-  padding: 1em;
-  margin: 1em auto;
-  border-radius: $border-radius;
+  border-top: 1px solid;
+  margin: 2em auto 0 auto;
 
   a,
   a:visited,
   a:link {
-    color: $background-color;
     text-decoration: none;
+    color: $color;
+    margin: 1em;
 
     &:hover {
       text-decoration: underline;
